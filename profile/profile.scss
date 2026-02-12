@@ -58,6 +58,15 @@
       border-radius: 50%;
       position: relative;
 
+      @media (max-width: 700px) {
+        width: 80px;
+        height: 80px;
+      }
+      @media (max-width: 400px) {
+        width: 50px;
+        height: 50px;
+      }
+
       .online::after {
         content: "";
         position: absolute;
@@ -67,6 +76,10 @@
         border-radius: 50%;
         bottom: 1px;
         right: 1px;
+
+        @media (max-width: 400px) {
+          padding: 5px;
+        }
       }
     }
     .prolfile_block_top_con {
@@ -75,12 +88,24 @@
       gap: 5px;
       height: 100%;
 
+      @media (max-width: 700px) {
+        gap: 2px;
+      }
+
       .name {
         font-size: 25px;
         font-weight: 700;
+
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
       }
       .otziv_con {
         display: flex;
+
+        @media (max-width: 700px) {
+        }
+
         &:hover .material-symbols-outlined {
           box-shadow: 0 0 5px rgba(255, 255, 0, 0.239);
         }
@@ -93,6 +118,13 @@
           font-size: 15px;
           color: black;
           font-weight: 500;
+
+          @media (max-width: 700px) {
+            font-size: 10px;
+          }
+          @media (max-width: 450px) {
+            padding: 1px;
+          }
         }
         .no_star {
           opacity: 0.07;
@@ -103,6 +135,10 @@
           background-color: rgba(117, 61, 238, 0);
           padding: 0;
           font-weight: 600;
+
+          @media (max-width: 700px) {
+            font-size: 10px;
+          }
         }
         .kolvo_otziv {
           font-size: 15px;
@@ -112,6 +148,10 @@
           font-weight: 400;
           opacity: 0.8;
           text-align: center;
+
+          @media (max-width: 700px) {
+            font-size: 10px;
+          }
         }
       }
       .id {
@@ -125,6 +165,10 @@
         font-weight: 600;
         background: linear-gradient(90deg, #321658ff, rgba(49, 22, 88, 0.244));
         cursor: default;
+
+        @media (max-width: 700px) {
+          font-size: 10px;
+        }
       }
     }
     .reg_tg_con {
@@ -143,6 +187,15 @@
         color: #c9c9c9;
         background-color: rgba(0, 0, 0, 0.248);
         border: 1px solid rgba(0, 0, 0, 0);
+
+        @media (max-width: 700px) {
+          padding: 5px;
+          font-size: 10px;
+        }
+        @media (max-width: 400px) {
+          width: auto;
+          font-size: 8px;
+        }
         &:hover {
           background-color: rgba(0, 0, 0, 0.481);
           transform: scale(1);
@@ -162,6 +215,15 @@
         border: 1px solid rgba(33, 89, 131, 0.838);
         background: linear-gradient(90deg, #0d2c44ff, rgba(13, 44, 68, 0.2));
         border-radius: 20px;
+
+        @media (max-width: 700px) {
+          padding: 5px 20px;
+          font-size: 10px;
+        }
+        @media (max-width: 400px) {
+          padding: 3px 10px;
+          font-size: 8px;
+        }
         &:hover {
           border: 1px solid rgba(62, 149, 215, 0.726);
           background: rgb(10, 35, 54);
@@ -176,11 +238,17 @@
     }
   }
   .profile_block_bot {
-    gap: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
     width: 80%;
     margin-top: 20px;
+
+    @media (max-width: 700px) {
+      gap: 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
 
     .block_bot_items {
       display: flex;
@@ -193,6 +261,10 @@
       padding: 20px;
       border: 1px solid rgb(122, 122, 122);
       background: linear-gradient(90deg, #262626ff, #3c3c3cff);
+
+      @media (max-width: 700px) {
+        padding: 10px;
+      }
 
       &:hover {
         transform: scale(1.01);
@@ -209,14 +281,37 @@
         border-radius: 50%;
         background-color: rgba(0, 0, 0, 0.126);
         color: rgb(111, 15, 255);
+
+        @media (max-width: 700px) {
+          font-size: 20px;
+        }
+        @media (max-width: 400px) {
+          font-size: 15px;
+        }
       }
       h1 {
         font-size: 20px;
         font-weight: 600;
+        text-align: center;
+
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
+        @media (max-width: 400px) {
+          font-size: 10px;
+        }
       }
       p {
         font-size: 15px;
         color: rgba(255, 255, 255, 0.469);
+        text-align: center;
+
+        @media (max-width: 700px) {
+          font-size: 10px;
+        }
+        @media (max-width: 400px) {
+          font-size: 7px;
+        }
       }
     }
   }
@@ -236,8 +331,9 @@
     font-weight: 600;
     background: rgb(40, 40, 40);
 
-    @media (max-width: 800px) {
-      font-size: 15px;
+    @media (max-width: 700px) {
+      padding: 5px 10px;
+      font-size: 10px;
     }
     &:hover {
       background: #5922e0;
@@ -254,8 +350,9 @@
   width: 98%;
   gap: 20px;
 
-  @media (max-width: 800px) {
-    gap: 5px;
+  @media (max-width: 700px) {
+    gap: 0px;
+    grid-template-columns: 1fr;
   }
 }
 .offer {
@@ -268,11 +365,8 @@
   border: 1px solid #6600ff00;
   cursor: pointer;
 
-  @media (max-width: 800px) {
-    padding: 10px;
-  }
-  @media (max-width: 500px) {
-    padding: 5px;
+  @media (max-width: 700px) {
+    margin-top: 10px;
   }
 
   &:hover {
