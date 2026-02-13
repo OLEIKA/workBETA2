@@ -7,7 +7,7 @@
 .offer_mediafile,
 .offer_screen {
   &:hover {
-    border: 1px solid rgb(122, 34, 255);
+    border: 1px solid rgba(122, 34, 255, 0.452);
   }
   border: 1px solid rgba(150, 60, 150, 0);
   border-radius: 15px;
@@ -32,6 +32,7 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  margin-right: auto;
 
   p {
     display: flex;
@@ -121,7 +122,7 @@
   &_items,
   &_items_search {
     gap: 20px;
-    border: 0.7px solid rgba(109, 109, 109, 1);
+    border: 1px solid rgba(109, 109, 109, 1);
     border-radius: 15px;
     background: linear-gradient(
       144.32deg,
@@ -139,7 +140,6 @@
       gap: 10px;
       padding: 10px;
     }
-
     &:hover {
       transform: scale(1.03);
     }
@@ -156,6 +156,17 @@
       opacity: 0.7;
       margin-top: -10px;
     }
+  }
+
+  .focus {
+    transform: translateY(-10px) scale(1.03);
+    border: 2.2px solid rgba(144, 80, 232, 1);
+    border-radius: 15px;
+    background: linear-gradient(
+      144.46deg,
+      rgba(56, 39, 80, 0.897) -93.378%,
+      rgba(0, 0, 0, 0.485) 285.163%
+    );
   }
 
   &_items,
@@ -177,39 +188,44 @@
       transform: rotate(0deg);
       color: rgba(144, 80, 232, 1);
     }
-
-    border: 2.2px solid rgba(144, 80, 232, 1);
-    border-radius: 15px;
-    background: linear-gradient(
-      144.46deg,
-      rgba(56, 39, 80, 0.897) -93.378%,
-      rgba(0, 0, 0, 0.485) 285.163%
-    );
   }
 }
 
+// блоки категорий
 .offer_category {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1050px) {
+    align-items: start;
+  }
+
   &_grid {
     padding: 10px;
     height: 120px;
-    width: 100%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     gap: 20px;
 
-    @media (max-width: 960px) {
-      height: 80px;
+    @media (max-width: 1050px) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 120px 120px;
+      gap: 10px;
+      height: 280px;
+      width: 50%;
     }
-    @media (max-width: 500px) {
-      height: 50px;
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 100px;
+      height: 350px;
     }
 
     .offer_category_items {
       border-radius: 15px;
+      width: 120px;
       background: linear-gradient(
         144.32deg,
         rgba(73, 73, 73, 0.868) -19.268%,
@@ -218,13 +234,15 @@
       );
       border: 0.7px solid rgb(109, 109, 109);
       cursor: pointer;
-
-      @media (max-width: 500px) {
-        border-radius: 10px;
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      padding: 20px;
+      font-size: 17px;
 
       &:hover {
-        transform: scale(1.05);
         border: 2.2px solid rgb(144, 80, 232);
         background: linear-gradient(
           144.46deg,
@@ -232,10 +250,37 @@
           rgba(0, 0, 0, 0.485) 285.163%
         );
       }
+      &:hover .material-symbols-outlined {
+        color: #6600ff;
+      }
+
+      // меняет текст при фокусе
+      .categor {
+        color: #6600ff;
+      }
+      .material-symbols-outlined {
+        font-size: 30px;
+      }
+
+      @media (max-width: 500px) {
+        border-radius: 10px;
+      }
     }
+  }
+
+  // активация после нажатия
+  .categr {
+    transform: translateY(-10px);
+    border: 2.2px solid rgb(144, 80, 232);
+    background: linear-gradient(
+      144.46deg,
+      rgba(56, 39, 80, 0.897) -93.378%,
+      rgba(0, 0, 0, 0.485) 285.163%
+    );
   }
 }
 
+// инпут вводы
 .offer_information {
   display: flex;
   flex-direction: column;
@@ -272,6 +317,7 @@
   }
 }
 
+// блок с медиафайлом
 .media_con {
   display: flex;
   flex-direction: column;
@@ -330,6 +376,7 @@
   }
 }
 
+// под блоком медиафайла параграф
 .media_p {
   width: 100%;
   margin-top: 5px;
@@ -351,7 +398,6 @@
 }
 
 // сами офферы
-
 .offer_screen {
   display: flex;
   flex-direction: column;
@@ -371,7 +417,7 @@
   background: rgba(38, 38, 38, 1);
   background: rgba(52, 52, 52, 1);
   border: 1px solid #6600ff00;
-  cursor: pointer;
+  cursor: default;
 
   @media (max-width: 800px) {
     padding: 10px;
@@ -382,7 +428,6 @@
 
   &:hover {
     border: 1px solid #6600ff;
-    transform: scale(1.02);
   }
 
   &_top {
@@ -469,6 +514,7 @@
     text-align: left;
     font-weight: 600;
     font-size: 13px;
+    width: 100%;
 
     @media (max-width: 800px) {
       font-size: 10px;
@@ -531,5 +577,21 @@
         }
       }
     }
+  }
+
+  // блок покупаю голубой цвет
+  .offer_top_znak_buy {
+    padding: 10px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(
+      270deg,
+      rgb(71, 96, 164),
+      rgb(48, 104, 114) 100%
+    );
+    font-weight: 600;
+    font-size: 16px;
   }
 }

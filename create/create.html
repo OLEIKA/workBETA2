@@ -75,14 +75,14 @@
         <h1 class="type_offer_top_h1">Выберите тип оффера</h1>
       </div>
       <div class="offer_type_grid">
-        <div class="offer_type_items">
+        <div class="offer_type_items typeitems">
           <span class="material-symbols-outlined"> shoppingmode </span>
           <div class="offer_type_items_h1">Предложить услугу</div>
           <div class="offer_type_items_p">
             Предлогайте свои музыкальные услуги
           </div>
         </div>
-        <div class="offer_type_items_search">
+        <div class="offer_type_items_search typeitems">
           <span class="material-symbols-outlined"> Search </span>
           <div class="offer_type_items_h1">Найти исполнителя</div>
           <div class="offer_type_items_p">
@@ -97,12 +97,28 @@
         <h1 class="type_offer_top_h1">Выберите категорию</h1>
       </div>
       <div class="offer_category_grid">
-        <div class="offer_category_items"></div>
-        <div class="offer_category_items"></div>
-        <div class="offer_category_items"></div>
-        <div class="offer_category_items"></div>
-        <div class="offer_category_items"></div>
-        <div class="offer_category_items"></div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> music_note_2 </span>
+          Биты
+        </div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> discover_tune </span>
+          Сведение
+        </div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> earbuds </span>
+          Мастеринг
+        </div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> image </span> Обложки
+        </div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> brush </span> Дизайн
+        </div>
+        <div class="offer_category_items">
+          <span class="material-symbols-outlined ico_cat"> more_horiz </span>
+          Другое
+        </div>
       </div>
     </div>
     <div class="offer_information">
@@ -164,16 +180,34 @@
         <p class="type_offer_top_p">5</p>
         <h1 class="type_offer_top_h1">Предпросмотр оффера</h1>
       </div>
-      <!-- офферы -->
+
+      <!-- Секция офферов -->
       <div class="con_offers">
         <div class="offer">
           <div class="offer_top">
-            <div class="offer_top_block">Продаю</div>
-            <div class="offer_top_block offtb">Сведение</div>
-            <div class="offer_top_block offtbb">500р</div>
+            <!-- СЮДА ИДЕТ "ПРОДАЮ/ПОКУПАЮ" -->
+            <div id="preview_type_label" class="offer_top_block">Продаю</div>
+            <!-- <--- ID ТУТ -->
+
+            <!-- СЮДА ИДЕТ КАТЕГОРИЯ (БИТЫ, СВЕДЕНИЕ И Т.Д.) -->
+            <div id="preview_category" class="offer_top_block offtb">
+              Сведение
+            </div>
+            <!-- <--- ID ТУТ -->
+
+            <!-- СЮДА ИДЕТ ЦЕНА -->
+            <div id="preview_price" class="offer_top_block offtbb">0р</div>
+            <!-- <--- ID ТУТ -->
           </div>
-          <div class="offer_h1">Название оффера</div>
-          <div class="offer_p">Описание оффера...</div>
+
+          <!-- СЮДА ИДЕТ НАЗВАНИЕ ИЗ ИНПУТА -->
+          <div id="preview_title" class="offer_h1">Название оффера</div>
+          <!-- <--- ID ТУТ -->
+
+          <!-- СЮДА ИДЕТ ОПИСАНИЕ ИЗ TEXTAREA -->
+          <div id="preview_desc" class="offer_p">Описание оффера...</div>
+          <!-- <--- ID ТУТ -->
+
           <div class="offer_profile">
             <img src="/img/1.jpg" alt="" class="offer_profile_avatar" />
             <div class="offer_profile_con">
