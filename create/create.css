@@ -366,7 +366,7 @@ a {
     font-size: 15px;
   }
 }
-@media (max-width: 5000px) {
+@media (max-width: 500px) {
   .offer_information form input,
   .offer_information form textarea {
     padding: 5px;
