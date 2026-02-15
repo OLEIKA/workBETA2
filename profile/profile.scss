@@ -17,9 +17,17 @@
   padding: 10px;
   cursor: pointer;
 
+  @media (max-width: 700px) {
+    padding: 2px 5px;
+    border-radius: 10px;
+  }
   .balance_number {
     font-weight: 600;
     font-size: 17px;
+
+    @media (max-width: 700px) {
+      font-size: 10px;
+    }
   }
 
   &:hover {
@@ -92,6 +100,7 @@
       width: 130px;
       height: 130px;
       border-radius: 50%;
+
       &:hover {
         opacity: 0.8;
         transform: scale(1.03);
@@ -102,8 +111,8 @@
         height: 80px;
       }
       @media (max-width: 400px) {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
       }
     }
 
@@ -131,6 +140,10 @@
       .name {
         font-size: 25px;
         font-weight: 700;
+
+        @media (max-width: 700px) {
+          font-size: 15px;
+        }
       }
       .otziv_con {
         display: flex;
@@ -147,9 +160,10 @@
           font-size: 20px;
           color: rgb(255, 187, 0);
           font-weight: 500;
-        }
-        .no_star {
-          opacity: 1;
+
+          @media (max-width: 700px) {
+            font-size: 12px;
+          }
         }
         .number_otziv {
           font-size: 18px;
@@ -157,6 +171,10 @@
           padding: 0;
           font-weight: 600;
           margin-left: 5px;
+
+          @media (max-width: 700px) {
+            font-size: 12px;
+          }
         }
         .kolvo_otziv {
           margin-left: 5px;
@@ -167,6 +185,10 @@
           font-weight: 400;
           opacity: 0.8;
           text-align: center;
+
+          @media (max-width: 700px) {
+            font-size: 10px;
+          }
         }
       }
       .id {
@@ -180,6 +202,10 @@
         font-weight: 650;
         background: linear-gradient(90deg, #321658ff, rgba(49, 22, 88, 0.244));
         cursor: default;
+
+        @media (max-width: 700px) {
+          font-size: 10px;
+        }
       }
     }
 

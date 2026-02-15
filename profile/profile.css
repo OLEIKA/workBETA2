@@ -42,9 +42,20 @@ a {
   padding: 10px;
   cursor: pointer;
 }
+@media (max-width: 700px) {
+  .header_balance {
+    padding: 2px 5px;
+    border-radius: 10px;
+  }
+}
 .header_balance .balance_number {
   font-weight: 600;
   font-size: 17px;
+}
+@media (max-width: 700px) {
+  .header_balance .balance_number {
+    font-size: 10px;
+  }
 }
 .header_balance:hover {
   transform: scale(1.03);
@@ -111,8 +122,8 @@ a {
 }
 @media (max-width: 400px) {
   .profile_block .prolfile_block_top img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
 }
 .profile_block .prolfile_block_top .online {
@@ -141,6 +152,11 @@ a {
   font-size: 25px;
   font-weight: 700;
 }
+@media (max-width: 700px) {
+  .profile_block .prolfile_block_top .prolfile_block_top_con .name {
+    font-size: 15px;
+  }
+}
 .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con {
   display: flex;
 }
@@ -158,8 +174,10 @@ a {
   color: rgb(255, 187, 0);
   font-weight: 500;
 }
-.profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con .no_star {
-  opacity: 1;
+@media (max-width: 700px) {
+  .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con span {
+    font-size: 12px;
+  }
 }
 .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con .number_otziv {
   font-size: 18px;
@@ -167,6 +185,11 @@ a {
   padding: 0;
   font-weight: 600;
   margin-left: 5px;
+}
+@media (max-width: 700px) {
+  .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con .number_otziv {
+    font-size: 12px;
+  }
 }
 .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con .kolvo_otziv {
   margin-left: 5px;
@@ -177,6 +200,11 @@ a {
   font-weight: 400;
   opacity: 0.8;
   text-align: center;
+}
+@media (max-width: 700px) {
+  .profile_block .prolfile_block_top .prolfile_block_top_con .otziv_con .kolvo_otziv {
+    font-size: 10px;
+  }
 }
 .profile_block .prolfile_block_top .prolfile_block_top_con .id {
   width: 45%;
@@ -189,6 +217,11 @@ a {
   font-weight: 650;
   background: linear-gradient(90deg, #321658, rgba(49, 22, 88, 0.244));
   cursor: default;
+}
+@media (max-width: 700px) {
+  .profile_block .prolfile_block_top .prolfile_block_top_con .id {
+    font-size: 10px;
+  }
 }
 .profile_block .prolfile_block_top .reg_tg_con {
   display: flex;
